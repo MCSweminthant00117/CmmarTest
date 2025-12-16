@@ -1,0 +1,253 @@
+:root {
+    --color-red: #E60000;
+    --color-black: #0D0D0D;
+    --color-white: #FFFFFF;
+    --color-gray: #CCCCCC;
+    --color-telegram: #0088CC; /* Telegram Color */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.page-wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER Section Design */
+.header {
+    background-color: var(--color-black);
+    padding: 20px;
+    border-bottom: 3px solid var(--color-red);
+    text-align: left; /* Logo ကို ဘယ်ဘက်သို့ ရွှေ့ရန် */
+}
+
+.header-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.pubg-icon {
+    font-size: 2.5em;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 2em; /* အရွယ်အစားလျှော့ချ */
+    letter-spacing: 5px;
+    color: var(--color-red);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.sub-title {
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--color-gray);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+
+/* IMAGE Placeholder */
+.image-banner {
+    width: 100%;
+    height: 150px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-gray);
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* MAIN Content */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    flex-grow: 1;
+}
+
+.description {
+    font-size: 1.1em;
+    color: var(--color-white);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Main Download Section */
+.download-section {
+    background-color: var(--color-red);
+    padding: 25px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.download-title {
+    font-size: 1.8em; /* အရွယ်အစားလျှော့ချ */
+    color: var(--color-white);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* General Button Styling */
+.btn {
+    display: block;
+    padding: 12px 18px; /* အရွယ်အစားလျှော့ချ */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.download-buttons {
+    display: flex;
+    flex-wrap: wrap; /* ဖုန်းမှာဆို အောက်ဆင်း၊ Desktop မှာ ဘေးယှဉ် */
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Main Download Button Specific */
+.btn-small {
+    padding: 15px 20px;
+    font-size: 1.05em;
+    width: 100%; /* Default: Mobile Full Width */
+}
+
+.btn-red {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 3px solid var(--color-white);
+}
+
+.btn-dark {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 3px solid var(--color-black);
+}
+
+.top-note {
+    font-size: 0.9em;
+    color: var(--color-gray);
+    margin-bottom: 40px;
+}
+
+/* Telegram Section */
+.telegram-section {
+    margin-bottom: 40px;
+}
+
+.btn-telegram {
+    background-color: var(--color-telegram);
+    color: var(--color-white);
+    border: 2px solid var(--color-telegram);
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+}
+
+.telegram-icon {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+/* Shizuku Helper Section */
+.shizuku-section, .version-section {
+    background-color: #1A1A1A;
+    padding: 25px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: var(--color-red);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    font-size: 0.9em;
+    color: var(--color-gray);
+    margin-bottom: 15px;
+}
+
+.btn-shizuku {
+    background-color: var(--color-gray);
+    color: var(--color-black);
+    border: none;
+    font-weight: bold;
+    width: 100%; 
+}
+
+.btn-tutorial {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-version {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-red);
+    width: 100%; 
+}
+
+/* Footer */
+.footer {
+    /* ... (ယခင်အတိုင်း) */
+    background-color: var(--color-black);
+    color: var(--color-gray);
+    padding: 15px;
+    border-top: 1px solid var(--color-red);
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+/* MEDIA QUERIES (Desktop/Tablet) */
+@media (min-width: 700px) {
+    /* Main Download Buttons */
+    .main-download .btn-small {
+        width: 45%; 
+    }
+    
+    /* Other Download Buttons */
+    .shizuku-buttons {
+        grid-template-columns: repeat(3, 1fr); /* 3 ခု ဘေးချင်းယှဉ် */
+        display: grid;
+        gap: 15px;
+    }
+
+    .version-buttons {
+        grid-template-columns: repeat(3, 1fr); /* 3 ခု ဘေးချင်းယှဉ် */
+        display: grid;
+        gap: 15px;
+    }
+    }
