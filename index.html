@@ -1,88 +1,65 @@
 <!DOCTYPE html>
-<html lang="my">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamer's Utility - CMM-AR</title>
+    <title>CMM-AR | PUBG GFX Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    </head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
 <body>
-    <div class="page-wrap">
-        <header class="header">
-            <div class="header-content">
-                <div class="logo-area">
-                    <span class="pubg-icon">🔥</span> 
-                    <h1 class="logo">CMM-AR</h1>
-                </div>
-                <h2 class="sub-title">PUBG GAMER'S UTILITY</h2>
+
+    <header class="m3-toolbar">
+        <div class="toolbar-left">
+            <span class="material-symbols-outlined icon-btn">menu</span>
+            <span class="m3-title">CMM-AR</span>
+        </div>
+        
+        <div class="toolbar-right">
+            <div class="lang-switch" onclick="toggleLanguage()">
+                <span id="current-lang">EN</span>
+                <span class="material-symbols-outlined">language</span>
             </div>
-        </header>
+            <span class="material-symbols-outlined icon-btn">more_vert</span>
+        </div>
+    </header>
 
-        <main class="container">
-            <div class="image-banner">
-                <p>PUBG MOBILE GAME IMAGE HERE</p>
+    <main class="container">
+        <section class="hero">
+            <h2 id="hero-title" class="m3-headline">Optimize Your PUBG Experience</h2>
+            <p id="hero-desc" class="m3-body">The most advanced GFX tool for PUBG Mobile. Unlock 90 FPS, HDR graphics, and lag-free gameplay with Material 3 integration.</p>
+            
+            <a href="#download-section" class="m3-btn-filled">
+                <span class="material-symbols-outlined">download</span>
+                <span id="btn-main-dl">Download GfxTool</span>
+            </a>
+        </section>
+
+        <section id="download-section" class="m3-card">
+            <h3 id="card-gfx-title" class="m3-title-large">GfxTool Versions</h3>
+            <div class="card-content">
+                <button class="m3-btn-tonal full-width">
+                    Download For Android 11 (Without Shizuku)
+                </button>
+                <button class="m3-btn-tonal full-width">
+                    Download For Android 11+ (With Shizuku)
+                </button>
             </div>
+        </section>
 
-            <section class="hero-section">
-                <p class="description">
-                    ဂိမ်းကစားခြင်း အတွေ့အကြုံကို မြှင့်တင်ပေးမည့် အကောင်းဆုံး ဂရပ်ဖစ်နှင့် စွမ်းဆောင်ရည် မြှင့်တင်ရေး ကိရိယာ။
-                </p>
-            </section>
+        <section class="m3-card">
+            <h3 id="card-pubg-title" class="m3-title-large">PUBG Original APK + OBB</h3>
+            <p id="card-pubg-desc" class="m3-body-small">Download official versions directly.</p>
+            <div class="button-grid">
+                <button class="m3-btn-outline">PUBG Global</button>
+                <button class="m3-btn-outline">PUBG Korea</button>
+                <button class="m3-btn-outline">PUBG Vietnam</button>
+                <button class="m3-btn-outline">PUBG Taiwan</button>
+            </div>
+        </section>
+    </main>
 
-            <section class="download-section">
-                <h3 class="download-title">APK DOWNLOAD (VERSION 3.0)</h3>
-                <div class="download-buttons main-download">
-                    <a href="#" class="btn btn-red btn-small">
-                        ANDROID 11+ (**SHIZUKU**)
-                    </a>
-                    
-                    <a href="#" class="btn btn-dark btn-small">
-                        ANDROID 11 (**WITHOUT SHIZUKU**)
-                    </a>
-                </div>
-            </section>
-            
-            <p class="note-text top-note">
-                မှတ်ချက်။ SHIZUKU ဗားရှင်းသည် ANDROID 11 နှင့်အထက် ဖုန်းများအတွက်ဖြစ်သည်။
-            </p>
-            
-            <section class="telegram-section">
-                <a href="https://t.me/your_channel_link" target="_blank" class="btn btn-telegram">
-                    <span class="telegram-icon">✈️</span> JOIN OUR TELEGRAM CHANNEL
-                </a>
-            </section>
-
-            <section class="shizuku-section">
-                <h4 class="section-title">SHIZUKU APP INSTALLATION & GUIDE</h4>
-                <div class="download-buttons shizuku-buttons">
-                    <a href="#" class="btn btn-shizuku">
-                        SHIZUKU APP (PLAY STORE)
-                    </a>
-                    <a href="#" class="btn btn-shizuku">
-                        SHIZUKU APP (UPTODOWN)
-                    </a>
-                    <a href="#" class="btn btn-tutorial">
-                        TUTORIAL ကြည့်ရန် (YOUTUBE)
-                    </a>
-                </div>
-            </section>
-
-            <section class="version-section">
-                <h4 class="section-title">OTHER PUBG VERSIONS DOWNLOAD</h4>
-                <p class="section-subtitle">PUBG MOBILE V2.9 - OFFICIAL APK + OBB</p>
-                <div class="download-buttons version-buttons">
-                    <a href="#" class="btn btn-version">PUBG GLOBAL</a>
-                    <a href="#" class="btn btn-version">PUBG KOREA (KR)</a>
-                    <a href="#" class="btn btn-version">PUBG VIETNAM (VN)</a>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="footer">
-            &copy; 2025 CMM-AR. ALL RIGHTS RESERVED.
-        </footer>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>
