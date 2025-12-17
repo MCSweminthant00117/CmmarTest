@@ -1,31 +1,33 @@
-let currentLang = 'EN';
+// Ripple Effect Handler
+document.addEventListener('mousedown', function (e) {
+    const target = e.target.closest('.ripple-effect');
+    if (!target) return;
 
+    const rect = target.getBoundingClientRect();
+    const ripple = document.createElement('span');
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
+
+    ripple.style.width = ripple.style.height = `${size}px`;
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+    ripple.classList.add('ripple');
+
+    target.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+});
+
+// Language Switcher Logic
+let currentLang = 'EN';
 const translations = {
-    EN: {
-        heroTitle: "Optimize Your PUBG Experience",
-        heroDesc: "The most advanced GFX tool for PUBG Mobile. Unlock 90 FPS and HDR graphics.",
-        mainBtn: "Download GfxTool",
-        cardGfx: "GfxTool Versions",
-        cardPubg: "PUBG Original APK + OBB"
-    },
-    MM: {
-        heroTitle: "PUBG အတွေ့အကြုံကို မြှင့်တင်ပါ",
-        heroDesc: "အဆင့်မြင့်ဆုံး PUBG GFX Tool ဖြစ်ပါသည်။ 90 FPS နှင့် HDR ဂရပ်ဖစ်များကို အသုံးပြုနိုင်ပါသည်။",
-        mainBtn: "GfxTool ဒေါင်းလုဒ်လုပ်ရန်",
-        cardGfx: "GfxTool ဗားရှင်းများ",
-        cardPubg: "PUBG မူရင်း APK + OBB"
-    }
+    EN: { heroTitle: "Optimize Your PUBG Experience", mainBtn: "Download GfxTool" },
+    MM: { heroTitle: "PUBG အတွေ့အကြုံကို မြှင့်တင်ပါ", mainBtn: "GfxTool ဒေါင်းလုဒ်လုပ်ရန်" }
 };
 
 function toggleLanguage() {
     currentLang = currentLang === 'EN' ? 'MM' : 'EN';
     document.getElementById('current-lang').innerText = currentLang;
-    
-    // Update Text
-    const langData = translations[currentLang];
-    document.getElementById('hero-title').innerText = langData.heroTitle;
-    document.getElementById('hero-desc').innerText = langData.heroDesc;
-    document.getElementById('btn-main-dl').innerText = langData.mainBtn;
-    document.getElementById('card-gfx-title').innerText = langData.cardGfx;
-    document.getElementById('card-pubg-title').innerText = langData.cardPubg;
+    document.getElementById('hero-title').innerText = translations[currentLang].heroTitle;
+    document.getElementById('btn-main-dl').innerText = translations[currentLang].mainBtn;
 }
