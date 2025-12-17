@@ -15,7 +15,6 @@
             <span class="material-symbols-outlined icon-btn">menu</span>
             <span class="m3-title">CMM-AR</span>
         </div>
-        
         <div class="toolbar-right">
             <div class="lang-switch" onclick="toggleLanguage()">
                 <span id="current-lang">EN</span>
@@ -25,41 +24,69 @@
         </div>
     </header>
 
+    <div class="hero-banner">
+        <img src="https://w0.peakpx.com/wallpaper/445/144/HD-wallpaper-pubg-mobile-poster-logo.jpg" alt="PUBG Mobile Banner">
+    </div>
+
     <main class="container">
-        <section class="hero">
+        <section class="hero-text">
             <h2 id="hero-title" class="m3-headline">Optimize Your PUBG Experience</h2>
-            <p id="hero-desc" class="m3-body">The most advanced GFX tool for PUBG Mobile. Unlock 90 FPS, HDR graphics, and lag-free gameplay with Material 3 integration.</p>
-            
-            <a href="#download-section" class="m3-btn-filled">
+            <p id="hero-desc" class="m3-body">Best GFX tool for Android 11+ with Shizuku support.</p>
+            <a href="#gfxtool-download" class="m3-btn-filled ripple-effect">
                 <span class="material-symbols-outlined">download</span>
                 <span id="btn-main-dl">Download GfxTool</span>
             </a>
         </section>
 
-        <section id="download-section" class="m3-card">
-            <h3 id="card-gfx-title" class="m3-title-large">GfxTool Versions</h3>
+        <section id="gfxtool-download" class="m3-card">
+            <h3 class="m3-title-large" id="shizuku-card-title">Download For Android 11+ (With Shizuku)</h3>
             <div class="card-content">
-                <button class="m3-btn-tonal full-width">
-                    Download For Android 11 (Without Shizuku)
-                </button>
-                <button class="m3-btn-tonal full-width">
-                    Download For Android 11+ (With Shizuku)
-                </button>
+                <div class="button-stack">
+                    <a href="#" class="m3-btn-tonal ripple-effect">
+                        <span class="material-symbols-outlined">shop</span> Play Store (Shizuku)
+                    </a>
+                    <a href="#" class="m3-btn-tonal ripple-effect">
+                        <span class="material-symbols-outlined">download_for_offline</span> Uptodown (Shizuku)
+                    </a>
+                    <a href="#" class="m3-btn-tutorial ripple-effect">
+                        <span class="material-symbols-outlined">play_circle</span> Watch Shizuku Setup Tutorial
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="m3-card">
-            <h3 id="card-pubg-title" class="m3-title-large">PUBG Original APK + OBB</h3>
-            <p id="card-pubg-desc" class="m3-body-small">Download official versions directly.</p>
-            <div class="button-grid">
-                <button class="m3-btn-outline">PUBG Global</button>
-                <button class="m3-btn-outline">PUBG Korea</button>
-                <button class="m3-btn-outline">PUBG Vietnam</button>
-                <button class="m3-btn-outline">PUBG Taiwan</button>
+        <h3 class="section-label">PUBG Original APK</h3>
+        
+        <div class="m3-card">
+            <h4 class="m3-title-medium">Download from Play Store</h4>
+            <div class="play-store-container">
+                <a href="#" class="ps-button ripple-effect">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+                </a>
             </div>
-        </section>
+        </div>
+
+        <div class="m3-card">
+            <h4 class="m3-title-medium">Download from Telegram</h4>
+            <div class="version-list">
+                <div class="version-item">
+                    <span>PUBG Global (v3.0)</span>
+                    <div class="bit-buttons">
+                        <button class="m3-btn-outline ripple-effect">32 Bit</button>
+                        <button class="m3-btn-outline ripple-effect">64 Bit</button>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <span>PUBG Korea (v3.0)</span>
+                    <div class="bit-buttons">
+                        <button class="m3-btn-outline ripple-effect">32 Bit</button>
+                        <button class="m3-btn-outline ripple-effect">64 Bit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="script.js"></script>
 </body>
-</html>
+                        </html>
