@@ -1,253 +1,126 @@
 :root {
-    --color-red: #E60000;
-    --color-black: #0D0D0D;
-    --color-white: #FFFFFF;
-    --color-gray: #CCCCCC;
-    --color-telegram: #0088CC; /* Telegram Color */
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
+    /* M3 Color Palette (Tonal palette) */
+    --md-sys-color-primary: #D90000;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-primary-container: #ffdad4;
+    --md-sys-color-secondary-container: #3d4946;
+    --md-sys-color-surface: #fdf8f8;
+    --md-sys-color-on-surface: #1c1b1b;
+    --md-sys-color-outline: #79747e;
+    --md-sys-font: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    line-height: 1.6;
-    text-align: center;
+    margin: 0;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-sys-font);
 }
 
-.page-wrap {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* HEADER Section Design */
-.header {
-    background-color: var(--color-black);
-    padding: 20px;
-    border-bottom: 3px solid var(--color-red);
-    text-align: left; /* Logo ကို ဘယ်ဘက်သို့ ရွှေ့ရန် */
-}
-
-.header-content {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.logo-area {
+/* M3 Toolbar */
+.m3-toolbar {
+    height: 64px;
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: var(--md-sys-color-surface);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.pubg-icon {
-    font-size: 2.5em;
-    margin-right: 10px;
-}
-
-.logo {
-    font-size: 2em; /* အရွယ်အစားလျှော့ချ */
-    letter-spacing: 5px;
-    color: var(--color-red);
-    text-transform: uppercase;
-    font-weight: 900;
-}
-
-.sub-title {
-    font-size: 1em;
-    font-weight: 300;
-    color: var(--color-gray);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-left: 5px;
-}
-
-/* IMAGE Placeholder */
-.image-banner {
-    width: 100%;
-    height: 150px;
-    background-color: #333;
+.toolbar-left, .toolbar-right {
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: var(--color-gray);
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    gap: 16px;
 }
 
-/* MAIN Content */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 20px;
-    flex-grow: 1;
+.m3-title {
+    font-size: 22px;
+    font-weight: 500;
 }
 
-.description {
-    font-size: 1.1em;
-    color: var(--color-white);
-    margin-bottom: 30px;
-    line-height: 1.8;
-}
+.icon-btn { cursor: pointer; padding: 8px; }
 
-/* Main Download Section */
-.download-section {
-    background-color: var(--color-red);
-    padding: 25px 20px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.download-title {
-    font-size: 1.8em; /* အရွယ်အစားလျှော့ချ */
-    color: var(--color-white);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-/* General Button Styling */
-.btn {
-    display: block;
-    padding: 12px 18px; /* အရွယ်အစားလျှော့ချ */
-    text-decoration: none;
-    font-size: 1em;
+/* Language Switcher */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--md-sys-color-primary-container);
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
     font-weight: bold;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
+    font-size: 14px;
 }
 
-.download-buttons {
-    display: flex;
-    flex-wrap: wrap; /* ဖုန်းမှာဆို အောက်ဆင်း၊ Desktop မှာ ဘေးယှဉ် */
-    justify-content: center;
-    gap: 15px;
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px 16px;
 }
 
-/* Main Download Button Specific */
-.btn-small {
-    padding: 15px 20px;
-    font-size: 1.05em;
-    width: 100%; /* Default: Mobile Full Width */
-}
+.hero { text-align: center; margin-bottom: 40px; }
 
-.btn-red {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    border: 3px solid var(--color-white);
-}
+/* M3 Typography */
+.m3-headline { font-size: 32px; font-weight: 400; margin-bottom: 16px; }
+.m3-body { font-size: 16px; color: #444; margin-bottom: 24px; }
+.m3-title-large { font-size: 20px; margin-bottom: 16px; }
 
-.btn-dark {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border: 3px solid var(--color-black);
-}
-
-.top-note {
-    font-size: 0.9em;
-    color: var(--color-gray);
-    margin-bottom: 40px;
-}
-
-/* Telegram Section */
-.telegram-section {
-    margin-bottom: 40px;
-}
-
-.btn-telegram {
-    background-color: var(--color-telegram);
-    color: var(--color-white);
-    border: 2px solid var(--color-telegram);
+/* M3 Buttons */
+.m3-btn-filled {
+    background-color: var(--md-sys-color-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 28px;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
-    width: auto;
+    gap: 8px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.telegram-icon {
-    font-size: 1.2em;
-    margin-right: 10px;
-}
-
-/* Shizuku Helper Section */
-.shizuku-section, .version-section {
-    background-color: #1A1A1A;
-    padding: 25px;
-    border-radius: 5px;
-    margin-bottom: 30px;
-}
-
-.section-title {
-    font-size: 1.5em;
-    color: var(--color-red);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.section-subtitle {
-    font-size: 0.9em;
-    color: var(--color-gray);
-    margin-bottom: 15px;
-}
-
-.btn-shizuku {
-    background-color: var(--color-gray);
-    color: var(--color-black);
+.m3-btn-tonal {
+    background-color: #f2f2f2;
     border: none;
-    font-weight: bold;
-    width: 100%; 
+    padding: 16px;
+    border-radius: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
 }
 
-.btn-tutorial {
-    background-color: var(--color-red);
-    color: var(--color-white);
-    border: none;
-    font-weight: bold;
-    width: 100%;
+.m3-btn-outline {
+    background: transparent;
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 20px;
+    padding: 10px 16px;
+    cursor: pointer;
 }
 
-.btn-version {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border: 1px solid var(--color-red);
-    width: 100%; 
+/* M3 Cards */
+.m3-card {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 28px; /* M3 Standard */
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* Footer */
-.footer {
-    /* ... (ယခင်အတိုင်း) */
-    background-color: var(--color-black);
-    color: var(--color-gray);
-    padding: 15px;
-    border-top: 1px solid var(--color-red);
-    font-size: 0.8em;
-    text-transform: uppercase;
+.card-content, .button-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* MEDIA QUERIES (Desktop/Tablet) */
-@media (min-width: 700px) {
-    /* Main Download Buttons */
-    .main-download .btn-small {
-        width: 45%; 
-    }
-    
-    /* Other Download Buttons */
-    .shizuku-buttons {
-        grid-template-columns: repeat(3, 1fr); /* 3 ခု ဘေးချင်းယှဉ် */
-        display: grid;
-        gap: 15px;
-    }
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-    .version-buttons {
-        grid-template-columns: repeat(3, 1fr); /* 3 ခု ဘေးချင်းယှဉ် */
-        display: grid;
-        gap: 15px;
-    }
-        }
+.full-width { width: 100%; }
