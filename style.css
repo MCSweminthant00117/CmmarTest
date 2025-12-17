@@ -1,23 +1,22 @@
 :root {
-    /* M3 Color Palette (Tonal palette) */
     --md-sys-color-primary: #D90000;
     --md-sys-color-on-primary: #ffffff;
-    --md-sys-color-primary-container: #ffdad4;
-    --md-sys-color-secondary-container: #3d4946;
     --md-sys-color-surface: #fdf8f8;
-    --md-sys-color-on-surface: #1c1b1b;
+    --md-sys-color-surface-variant: #f2f2f2;
     --md-sys-color-outline: #79747e;
     --md-sys-font: 'Roboto', sans-serif;
 }
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    margin: 0;
     background-color: var(--md-sys-color-surface);
-    color: var(--md-sys-color-on-surface);
+    color: #1c1b1b;
     font-family: var(--md-sys-font);
+    line-height: 1.5;
 }
 
-/* M3 Toolbar */
+/* Toolbar */
 .m3-toolbar {
     height: 64px;
     display: flex;
@@ -25,102 +24,81 @@ body {
     justify-content: space-between;
     padding: 0 16px;
     background-color: var(--md-sys-color-surface);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position: sticky; top: 0; z-index: 100;
 }
 
-.toolbar-left, .toolbar-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
+.toolbar-left, .toolbar-right { display: flex; align-items: center; gap: 12px; }
+.m3-title { font-size: 20px; font-weight: 500; }
 
-.m3-title {
-    font-size: 22px;
-    font-weight: 500;
-}
+/* Banner */
+.hero-banner { width: 100%; height: 200px; overflow: hidden; }
+.hero-banner img { width: 100%; height: 100%; object-fit: cover; }
 
-.icon-btn { cursor: pointer; padding: 8px; }
-
-/* Language Switcher */
-.lang-switch {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background: var(--md-sys-color-primary-container);
-    padding: 4px 12px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-/* Container */
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 24px 16px;
-}
-
-.hero { text-align: center; margin-bottom: 40px; }
+.container { max-width: 500px; margin: 0 auto; padding: 20px; }
+.hero-text { text-align: center; margin: 24px 0; }
 
 /* M3 Typography */
-.m3-headline { font-size: 32px; font-weight: 400; margin-bottom: 16px; }
-.m3-body { font-size: 16px; color: #444; margin-bottom: 24px; }
-.m3-title-large { font-size: 20px; margin-bottom: 16px; }
-
-/* M3 Buttons */
-.m3-btn-filled {
-    background-color: var(--md-sys-color-primary);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 28px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.m3-btn-tonal {
-    background-color: #f2f2f2;
-    border: none;
-    padding: 16px;
-    border-radius: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    text-align: left;
-}
-
-.m3-btn-outline {
-    background: transparent;
-    border: 1px solid var(--md-sys-color-outline);
-    border-radius: 20px;
-    padding: 10px 16px;
-    cursor: pointer;
-}
+.m3-headline { font-size: 28px; font-weight: 500; margin-bottom: 8px; }
+.m3-body { color: #444; margin-bottom: 20px; }
+.m3-title-large { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: var(--md-sys-color-primary); }
+.m3-title-medium { font-size: 16px; font-weight: 500; margin-bottom: 12px; }
+.section-label { margin: 16px 0; font-size: 14px; letter-spacing: 1px; color: #666; font-weight: bold; }
 
 /* M3 Cards */
 .m3-card {
-    background-color: #ffffff;
-    padding: 24px;
-    border-radius: 28px; /* M3 Standard */
-    margin-bottom: 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
-.card-content, .button-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+/* M3 Buttons */
+.m3-btn-filled {
+    background: var(--md-sys-color-primary); color: white;
+    padding: 12px 24px; border-radius: 28px; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px; font-weight: 500;
 }
 
-.button-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.m3-btn-tonal {
+    background: var(--md-sys-color-surface-variant); color: #1c1b1b;
+    border: none; padding: 14px; border-radius: 12px; text-decoration: none;
+    display: flex; align-items: center; gap: 10px; font-weight: 500;
 }
 
-.full-width { width: 100%; }
+.m3-btn-tutorial {
+    background: #34a853; color: white;
+    border: none; padding: 14px; border-radius: 12px; text-decoration: none;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+
+.m3-btn-outline {
+    background: transparent; border: 1px solid var(--md-sys-color-outline);
+    padding: 8px 16px; border-radius: 8px; cursor: pointer; flex: 1;
+}
+
+.button-stack { display: flex; flex-direction: column; gap: 12px; }
+
+/* Play Store Button */
+.ps-button img { height: 50px; }
+
+/* Version Items */
+.version-item { border-bottom: 1px solid #eee; padding: 12px 0; }
+.version-item:last-child { border: none; }
+.bit-buttons { display: flex; gap: 10px; margin-top: 8px; }
+
+/* RIPPLE EFFECT SYSTEM */
+.ripple-effect { position: relative; overflow: hidden; }
+.ripple {
+    position: absolute; border-radius: 50%; transform: scale(0);
+    animation: ripple-animation 600ms linear;
+    background: rgba(255, 255, 255, 0.4); pointer-events: none;
+}
+.m3-btn-tonal .ripple, .m3-btn-outline .ripple { background: rgba(0, 0, 0, 0.1); }
+
+@keyframes ripple-animation {
+    to { transform: scale(4); opacity: 0; }
+}
+
+/* Lang Switch */
+.lang-switch { display: flex; align-items: center; gap: 5px; background: #eee; padding: 4px 10px; border-radius: 20px; cursor: pointer; }
