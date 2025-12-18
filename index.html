@@ -16,7 +16,7 @@
             <span class="m3-title">CMM-AR</span>
         </div>
         <div class="toolbar-right">
-            <div class="lang-switch" onclick="toggleLanguage()">
+            <div class="lang-switch ripple-effect" onclick="toggleLanguage()">
                 <span id="current-lang">EN</span>
                 <span class="material-symbols-outlined">language</span>
             </div>
@@ -25,68 +25,85 @@
     </header>
 
     <div class="hero-banner">
-        <img src="https://w0.peakpx.com/wallpaper/445/144/HD-wallpaper-pubg-mobile-poster-logo.jpg" alt="PUBG Mobile Banner">
+        <img src="https://w0.peakpx.com/wallpaper/445/144/HD-wallpaper-pubg-mobile-poster-logo.jpg" alt="PUBG Banner">
     </div>
 
     <main class="container">
         <section class="hero-text">
             <h2 id="hero-title" class="m3-headline">Optimize Your PUBG Experience</h2>
-            <p id="hero-desc" class="m3-body">Best GFX tool for Android 11+ with Shizuku support.</p>
-            <a href="#gfxtool-download" class="m3-btn-filled ripple-effect">
+            <p id="hero-desc" class="m3-body">Professional GFX tool with Material 3 design and Shizuku support.</p>
+            <a href="#gfxtool-options" class="m3-btn-filled ripple-effect">
                 <span class="material-symbols-outlined">download</span>
                 <span id="btn-main-dl">Download GfxTool</span>
             </a>
         </section>
 
-        <section id="gfxtool-download" class="m3-card">
-            <h3 class="m3-title-large" id="shizuku-card-title">Download For Android 11+ (With Shizuku)</h3>
-            <div class="card-content">
-                <div class="button-stack">
-                    <a href="#" class="m3-btn-tonal ripple-effect">
-                        <span class="material-symbols-outlined">shop</span> Play Store (Shizuku)
-                    </a>
-                    <a href="#" class="m3-btn-tonal ripple-effect">
-                        <span class="material-symbols-outlined">download_for_offline</span> Uptodown (Shizuku)
-                    </a>
-                    <a href="#" class="m3-btn-tutorial ripple-effect">
-                        <span class="material-symbols-outlined">play_circle</span> Watch Shizuku Setup Tutorial
-                    </a>
-                </div>
+        <section id="gfxtool-options" class="m3-card">
+            <h3 class="m3-title-large">GFXTool Versions</h3>
+            <div class="button-stack">
+                <a href="#" class="m3-btn-tonal ripple-effect">Download for Android 11 (Without Shizuku)</a>
+                <a href="#" class="m3-btn-tonal ripple-effect">Download for Android 11+ (With Shizuku)</a>
+                <a href="#shizuku-setup" class="m3-btn-text ripple-effect">
+                    <span class="material-symbols-outlined">help_outline</span> How to use Shizuku?
+                </a>
             </div>
         </section>
 
-        <h3 class="section-label">PUBG Original APK</h3>
+        <h2 class="section-label-large">PUBG Original APK</h2>
         
         <div class="m3-card">
             <h4 class="m3-title-medium">Download from Play Store</h4>
-            <div class="play-store-container">
-                <a href="#" class="ps-button ripple-effect">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
-                </a>
+            <div class="play-store-grid">
+                <div class="ps-item"><span>Global</span><a href="#" class="ps-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a></div>
+                <div class="ps-item"><span>Korea</span><a href="#" class="ps-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a></div>
+                <div class="ps-item"><span>Taiwan</span><a href="#" class="ps-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a></div>
+                <div class="ps-item"><span>Vietnam</span><a href="#" class="ps-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a></div>
+                <div class="ps-item"><span>India (BGMI)</span><a href="#" class="ps-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a></div>
             </div>
         </div>
 
         <div class="m3-card">
-            <h4 class="m3-title-medium">Download from Telegram</h4>
+            <h4 class="m3-title-medium">Download from Telegram (APK+OBB)</h4>
             <div class="version-list">
                 <div class="version-item">
-                    <span>PUBG Global (v3.0)</span>
-                    <div class="bit-buttons">
+                    <p>PUBG Global</p>
+                    <div class="bit-row">
                         <button class="m3-btn-outline ripple-effect">32 Bit</button>
                         <button class="m3-btn-outline ripple-effect">64 Bit</button>
                     </div>
                 </div>
                 <div class="version-item">
-                    <span>PUBG Korea (v3.0)</span>
-                    <div class="bit-buttons">
+                    <p>PUBG Korea / Taiwan / VN</p>
+                    <div class="bit-row">
                         <button class="m3-btn-outline ripple-effect">32 Bit</button>
                         <button class="m3-btn-outline ripple-effect">64 Bit</button>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <section id="shizuku-setup" class="m3-card shizuku-card">
+            <h3 class="m3-title-large">Shizuku Setup & Download</h3>
+            <div class="button-stack">
+                <a href="#" class="m3-btn-tonal-purple ripple-effect">
+                    <span class="material-symbols-outlined">shop</span> Play Store (Shizuku)
+                </a>
+                <a href="#" class="m3-btn-tonal-purple ripple-effect">
+                    <span class="material-symbols-outlined">download</span> Uptodown (Shizuku)
+                </a>
+                <a href="#" class="m3-btn-tutorial ripple-effect">
+                    <span class="material-symbols-outlined">videocam</span> Watch Shizuku Setup Tutorial
+                </a>
+            </div>
+        </section>
+
+        <div class="social-footer">
+            <a href="#" class="m3-btn-filled telegram-btn ripple-effect">
+                <span class="material-symbols-outlined">send</span> JOIN TELEGRAM
+            </a>
         </div>
     </main>
 
     <script src="script.js"></script>
 </body>
-                        </html>
+                                                           </html>
